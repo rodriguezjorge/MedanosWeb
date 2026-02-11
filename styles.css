@@ -73,33 +73,25 @@ body {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--accent); }
-.lang-switcher {
+
+/* Google Translate widget in header */
+.translate-wrapper {
   display: flex;
   align-items: center;
-  gap: 0.35rem;
 }
-.lang-btn {
-  background: none;
-  border: none;
-  color: var(--text-muted);
+.translate-wrapper .skiptranslate {
+  font-size: 0.85rem;
+}
+.translate-wrapper select,
+.translate-wrapper .goog-te-combo {
+  background: var(--bg-card);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.35rem 0.5rem;
   font-family: var(--font-body);
   font-size: 0.85rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
   cursor: pointer;
-  padding: 0.35rem 0.5rem;
-  border-radius: 2px;
-  transition: color 0.2s, background 0.2s;
-}
-.lang-btn:hover { color: var(--text); }
-.lang-btn.is-active {
-  color: var(--accent);
-  background: rgba(230, 57, 70, 0.12);
-}
-.lang-sep {
-  color: var(--border);
-  font-size: 0.8rem;
-  user-select: none;
 }
 .nav-toggle {
   display: none;
@@ -336,6 +328,111 @@ body {
   justify-content: center;
 }
 
+/* --- News --- */
+.news {
+  background: var(--bg-card);
+}
+.news-intro {
+  color: var(--text-muted);
+  margin: 0 0 2rem;
+  font-weight: 300;
+}
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1.5rem;
+}
+.news-item {
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+.news-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.news-date {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 0.35rem;
+}
+.news-item-title {
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem;
+  color: var(--text);
+}
+.news-item-text {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+/* --- Tour --- */
+.tour-intro {
+  color: var(--text-muted);
+  margin: 0 0 2rem;
+  font-weight: 300;
+}
+.tour-list {
+  display: grid;
+  gap: 1rem;
+}
+.tour-empty {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-muted);
+  font-weight: 300;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+.tour-date {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.tour-date-day {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+  white-space: nowrap;
+}
+.tour-date-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.tour-date-venue {
+  font-weight: 600;
+  color: var(--text);
+}
+.tour-date-city {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-weight: 300;
+}
+.tour-date-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.tour-date-link:hover {
+  text-decoration: underline;
+}
+
 /* --- Footer --- */
 .footer {
   padding: 2.5rem 1.5rem;
@@ -402,4 +499,8 @@ body {
   .section-title { font-size: 1.75rem; letter-spacing: 0.15em; }
   .members-list li { flex-direction: column; gap: 0.25rem; }
   .role { min-width: auto; }
+  .tour-date {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
 }
