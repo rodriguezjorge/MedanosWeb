@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medanos | Alternative Punk Rock — Chicago</title>
+  <meta name="description" content="Medanos es una banda alternativa punk rock con sede en Chicago. Vladimir, George, kharim, Jesús y Stephanie.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="#inicio" class="logo">MEDANOS</a>
+      <ul class="nav-links">
+        <li><a href="#inicio" data-i18n="nav.home">Inicio</a></li>
+        <li><a href="#nosotros" data-i18n="nav.about">Nosotros</a></li>
+        <li><a href="#integrantes" data-i18n="nav.members">Integrantes</a></li>
+        <li><a href="#musica" data-i18n="nav.music">Música</a></li>
+        <li><a href="#escuchar" data-i18n="nav.listen">Escuchar</a></li>
+      </ul>
+      <div class="lang-switcher">
+        <button type="button" class="lang-btn" data-lang="es" aria-label="Español">ES</button>
+        <span class="lang-sep">|</span>
+        <button type="button" class="lang-btn" data-lang="en" aria-label="English">EN</button>
+      </div>
+      <button class="nav-toggle" aria-label="Abrir menú" data-i18n-aria="nav.menuOpen">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">MEDANOS</h1>
+        <p class="hero-tagline">Alternative Punk Rock · Chicago</p>
+        <div class="hero-links">
+          <a href="https://open.spotify.com/artist/3aGHdwTwUYN20nx3z7H0km" class="btn btn-spotify" target="_blank" rel="noopener" data-i18n="hero.spotify">Escuchar en Spotify</a>
+          <a href="https://www.instagram.com/medanosofficial/" class="btn btn-ig" target="_blank" rel="noopener">Instagram</a>
+        </div>
+      </div>
+      <div class="scroll-hint">↓</div>
+    </section>
+
+    <section id="nosotros" class="section about">
+      <div class="container">
+        <h2 class="section-title" data-i18n="about.title">Nosotros</h2>
+        <div class="about-grid">
+          <p class="about-text" data-i18n="about.para"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="integrantes" class="section members">
+      <div class="container">
+        <h2 class="section-title" data-i18n="members.title">Integrantes</h2>
+        <ul class="members-list">
+          <li><span class="role" data-i18n="members.voiceGuitar">Voz & guitarra</span> Vladimir</li>
+          <li><span class="role" data-i18n="members.guitarBacking">Guitarra & coros</span> George</li>
+          <li><span class="role" data-i18n="members.guitar">Guitarra</span> kharim</li>
+          <li><span class="role" data-i18n="members.bassBacking">Bajo & coros</span> Jesús</li>
+          <li><span class="role" data-i18n="members.drums">Batería</span> Stephanie</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="musica" class="section music">
+      <div class="container">
+        <h2 class="section-title" data-i18n="music.title">Música</h2>
+        <p class="music-intro" data-i18n="music.intro">Algunos temas y lanzamientos recientes.</p>
+        <ul class="tracks-list">
+          <li>Annie</li>
+          <li>Dance</li>
+          <li>Esencia</li>
+          <li>Addiction</li>
+          <li>Chaos</li>
+        </ul>
+        <p class="music-release"><span data-i18n="music.latest">Último lanzamiento</span>: <strong>IS THE DREAM STILL ALIVE?</strong> — EP · 2025</p>
+      </div>
+    </section>
+
+    <section id="escuchar" class="section listen">
+      <div class="container">
+        <h2 class="section-title" data-i18n="listen.title">Escuchar</h2>
+        <div class="listen-embed">
+          <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/3aGHdwTwUYN20nx3z7H0km?utm_source=generator&theme=0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" data-i18n-title="listen.spotifyTitle"></iframe>
+        </div>
+        <div class="listen-links">
+          <a href="https://open.spotify.com/artist/3aGHdwTwUYN20nx3z7H0km" class="btn btn-spotify" target="_blank" rel="noopener" data-i18n="listen.spotify">Abrir en Spotify</a>
+          <a href="https://www.instagram.com/medanosofficial/" class="btn btn-ig" target="_blank" rel="noopener" data-i18n="listen.instagram">Seguir en Instagram</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-brand">MEDANOS</p>
+      <div class="footer-social">
+        <a href="https://open.spotify.com/artist/3aGHdwTwUYN20nx3z7H0km" target="_blank" rel="noopener" aria-label="Spotify">Spotify</a>
+        <a href="https://www.instagram.com/medanosofficial/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+      </div>
+      <p class="footer-copy" data-i18n="footer.copy">Chicago · Alternative Punk Rock</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
