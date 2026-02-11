@@ -8,6 +8,7 @@
   --accent-soft: #c1121f;
   --spotify: #1db954;
   --ig: #e4405f;
+  --yt: #ff0000;
   --border: #2a2a2a;
   --font-display: "Bebas Neue", sans-serif;
   --font-body: "Outfit", sans-serif;
@@ -155,7 +156,10 @@ body {
   justify-content: center;
 }
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
   padding: 0.85rem 1.75rem;
   font-family: var(--font-body);
   font-size: 0.9rem;
@@ -166,20 +170,38 @@ body {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .btn:hover { transform: translateY(-2px); }
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+.btn-icon svg {
+  display: block;
+}
+.btn-label {
+  display: inline-block;
+}
 .btn-spotify {
   background: var(--spotify);
   color: #0c0c0c;
 }
 .btn-spotify:hover { box-shadow: 0 6px 24px rgba(29, 185, 84, 0.4); }
 .btn-ig {
-  background: transparent;
-  color: var(--text);
-  border: 2px solid var(--border);
+  background: var(--ig);
+  color: #ffffff;
+  border: none;
 }
 .btn-ig:hover {
-  border-color: var(--ig);
-  color: var(--ig);
-  box-shadow: 0 6px 24px rgba(228, 64, 95, 0.2);
+  box-shadow: 0 6px 24px rgba(228, 64, 95, 0.4);
+}
+.btn-yt {
+  background: var(--yt);
+  color: #ffffff;
+  border: none;
+}
+.btn-yt:hover {
+  box-shadow: 0 6px 24px rgba(255, 0, 0, 0.4);
 }
 .scroll-hint {
   position: absolute;
@@ -320,8 +342,18 @@ body {
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .footer-social a:hover { color: var(--accent); }
+.footer-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+.footer-icon svg { display: block; }
 .footer-copy {
   margin: 0;
   font-size: 0.85rem;
