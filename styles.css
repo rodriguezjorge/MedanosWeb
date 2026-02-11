@@ -1,3 +1,12 @@
+/* --- Fonts --- */
+@font-face {
+  font-family: 'MedanosSectionCaps';
+  src: url('fonts/MedanosSectionCaps-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* --- Variables --- */
 :root {
   --bg: #0c0c0c;
@@ -14,6 +23,7 @@
   --border: #2a2a2a;
   --font-display: "Bebas Neue", sans-serif;
   --font-body: "Outfit", sans-serif;
+  --font-ep-title: "Permanent Marker", cursive;
 }
 
 /* --- Reset & base --- */
@@ -237,9 +247,9 @@ body {
   margin: 0 auto;
 }
 .section-title {
-  font-family: var(--font-display);
+  font-family: var(--font-ep-title);
   font-size: 2.25rem;
-  letter-spacing: 0.2em;
+  letter-spacing: 2px;
   margin: 0 0 2rem;
   color: var(--text);
 }
@@ -307,7 +317,10 @@ body {
   font-size: 0.95rem;
   color: var(--text-muted);
 }
-.music-release strong { color: var(--accent); }
+.music-release strong {
+  font-family: var(--font-ep-title);
+  color: var(--accent);
+}
 
 /* --- Listen (Spotify embed) --- */
 .listen {
@@ -367,6 +380,10 @@ body {
   font-weight: 600;
   margin: 0 0 0.5rem;
   color: var(--text);
+}
+.news-item-title.ep-title-style {
+  font-family: var(--font-ep-title);
+  font-weight: 400;
 }
 .news-item-text {
   margin: 0;
