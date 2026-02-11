@@ -343,6 +343,58 @@ body {
 }
 .btn-merch:hover { box-shadow: 0 6px 24px rgba(230, 57, 70, 0.4); }
 
+/* --- Newsletter / Subscribe --- */
+.newsletter {
+  background: var(--bg-card);
+}
+.newsletter-intro {
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+  font-weight: 300;
+}
+.newsletter-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  max-width: 420px;
+}
+.newsletter-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: border-color 0.2s;
+}
+.newsletter-input::placeholder {
+  color: var(--text-muted);
+}
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.btn-newsletter {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+}
+.btn-newsletter:hover { box-shadow: 0 6px 24px rgba(230, 57, 70, 0.4); }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* --- Listen (Spotify embed) --- */
 .listen {
   background: var(--bg-card);
@@ -549,4 +601,6 @@ body {
     gap: 0.5rem;
   }
   .tour-date-links { gap: 0.5rem; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-input { min-width: 100%; }
 }
