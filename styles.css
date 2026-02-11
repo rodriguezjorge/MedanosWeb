@@ -326,6 +326,19 @@ body {
   color: var(--accent);
 }
 
+/* --- Merch --- */
+.merch-intro {
+  color: var(--text-muted);
+  margin: 0 0 1.5rem;
+  font-weight: 300;
+}
+.btn-merch {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+}
+.btn-merch:hover { box-shadow: 0 6px 24px rgba(230, 57, 70, 0.4); }
+
 /* --- Listen (Spotify embed) --- */
 .listen {
   background: var(--bg-card);

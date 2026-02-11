@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merch — Medanos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;600&family=Permanent+Marker&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .coming-soon-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem 1.5rem;
+    }
+    .coming-soon-page h1 {
+      font-family: var(--font-ep-title);
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      color: var(--text);
+      margin: 0 0 1rem;
+    }
+    .coming-soon-page p {
+      color: var(--text-muted);
+      font-weight: 300;
+      margin: 0 0 2rem;
+    }
+    .coming-soon-page a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+    }
+    .coming-soon-page a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <nav class="nav">
+      <a href="index.html" class="logo">MEDANOS</a>
+      <ul class="nav-links">
+        <li><a href="index.html#inicio">Home</a></li>
+        <li><a href="index.html#merch">Merch</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main class="coming-soon-page">
+    <h1>Coming soon</h1>
+    <p>We're preparing our official merch. Check back later.</p>
+    <a href="index.html">← Back to home</a>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
