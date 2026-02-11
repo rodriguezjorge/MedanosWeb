@@ -6,6 +6,7 @@ const translations = {
     nav: {
       home: 'Inicio',
       about: 'Nosotros',
+      video: 'Video',
       members: 'Integrantes',
       music: 'Música',
       listen: 'Escuchar',
@@ -46,6 +47,7 @@ const translations = {
     nav: {
       home: 'Home',
       about: 'About',
+      video: 'Video',
       members: 'Members',
       music: 'Music',
       listen: 'Listen',
@@ -140,19 +142,44 @@ function applyLanguage(lang) {
 // Menú móvil
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
+const nav = document.querySelector('.nav');
+
+function getCurrentTranslations() {
+  const lang = document.documentElement.lang || 'es';
+  return translations[lang] || translations.es;
+}
+
+function closeMobileMenu() {
+  if (!navLinks || !navToggle) return;
+  if (!navLinks.classList.contains('is-open')) return;
+
+  navLinks.classList.remove('is-open');
+  const t = getCurrentTranslations();
+  navToggle.setAttribute('aria-label', t.nav.menuOpen);
+}
 
 if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
     navLinks.classList.toggle('is-open');
-    const lang = document.documentElement.lang || 'es';
-    const t = translations[lang] || translations.es;
+    const t = getCurrentTranslations();
     navToggle.setAttribute('aria-label',
       navLinks.classList.contains('is-open') ? t.nav.menuClose : t.nav.menuOpen
     );
   });
 
   navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => navLinks.classList.remove('is-open'));
+    link.addEventListener('click', () => closeMobileMenu());
+  });
+
+  // Cerrar menú si se hace click/tap fuera
+  document.addEventListener('click', (e) => {
+    if (!navLinks.classList.contains('is-open')) return;
+
+    const target = e.target;
+    if (!(target instanceof Node)) return;
+
+    const clickedInsideNav = (nav && nav.contains(target)) || navLinks.contains(target) || navToggle.contains(target);
+    if (!clickedInsideNav) closeMobileMenu();
   });
 }
 
