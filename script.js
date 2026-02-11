@@ -57,7 +57,7 @@ const translations = {
     },
     about: {
       title: 'About',
-      para: 'Medanos is a Chicago-based alternative punk rock band consisting of Vladimir (lead vocals & guitar), George (guitar & backing vocals), kharim (guitar), Jesús (bass & backing vocals), and Stephanie (drums).',
+      para: 'Medanos is a Chicago-based alternative punk rock band consisting of Vladimir (lead vocals & guitar), George (guitar, synthesizer & backing vocals), kharim (guitar), Jesús (bass & backing vocals), and Stephanie (drums).',
     },
     members: {
       title: 'Members',
