@@ -285,8 +285,13 @@ body {
 .members-list li {
   display: flex;
   align-items: baseline;
-  gap: 1rem;
+  gap: 0.5rem;
   font-size: 1.1rem;
+}
+.member-name {
+  font-weight: 600;
+  color: var(--text);
+  min-width: 100px;
 }
 .role {
   font-size: 0.85rem;
@@ -294,7 +299,6 @@ body {
   color: var(--text-muted);
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  min-width: 140px;
 }
 
 /* --- Music --- */
@@ -538,6 +542,7 @@ body {
   .section { padding: 3rem 1.5rem; }
   .section-title { font-size: 1.75rem; letter-spacing: 0.15em; }
   .members-list li { flex-direction: column; gap: 0.25rem; }
+  .member-name { min-width: auto; }
   .role { min-width: auto; }
   .tour-date {
     grid-template-columns: 1fr;
