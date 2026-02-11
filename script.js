@@ -17,7 +17,7 @@ const translations = {
     },
     about: {
       title: 'Nosotros',
-      para: 'Medanos es una banda alternativa punk rock con sede en Chicago formada por Vladimir (voz principal y guitarra), George (guitarra y coros), kharim (guitarra), Jesús (bajo y coros) y Stephanie (batería).',
+      para: 'Medanos es una banda alternativa punk rock con sede en Chicago formada por Vladimir (voz principal y guitarra), George (guitarra, sintetizador y coros), kharim (guitarra), Jesús (bajo y coros) y Stephanie (batería).',
     },
     members: {
       title: 'Integrantes',
