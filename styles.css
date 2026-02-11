@@ -9,6 +9,8 @@
   --spotify: #1db954;
   --ig: #e4405f;
   --yt: #ff0000;
+  --apple: #fa243c;
+  --tiktok: #000000;
   --border: #2a2a2a;
   --font-display: "Bebas Neue", sans-serif;
   --font-body: "Outfit", sans-serif;
@@ -202,6 +204,21 @@ body {
 }
 .btn-yt:hover {
   box-shadow: 0 6px 24px rgba(255, 0, 0, 0.4);
+}
+.btn-apple {
+  background: var(--apple);
+  color: #ffffff;
+}
+.btn-apple:hover {
+  box-shadow: 0 6px 24px rgba(250, 36, 60, 0.4);
+}
+.btn-tiktok {
+  background: var(--tiktok);
+  color: #ffffff;
+  border: 1px solid var(--border);
+}
+.btn-tiktok:hover {
+  box-shadow: 0 6px 24px rgba(255, 255, 255, 0.15);
 }
 .scroll-hint {
   position: absolute;
