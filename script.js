@@ -95,6 +95,14 @@ if (lightbox && lightboxImg) {
     if (e.key === 'Escape' && lightbox && lightbox.classList.contains('is-open')) closeLightbox();
   });
 }
+// Tour posters: click to open in lightbox
+var tourSection = document.querySelector('.section.tour');
+if (tourSection && typeof openLightbox === 'function') {
+  tourSection.addEventListener('click', function (e) {
+    var img = e.target.closest('.tour-date-poster img');
+    if (img) openLightbox(img.src, img.alt);
+  });
+}
 
 // Mobile menu
 const navToggle = document.querySelector('.nav-toggle');
