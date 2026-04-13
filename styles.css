@@ -689,6 +689,9 @@ body {
 .tour-date-link:hover {
   text-decoration: underline;
 }
+.tour-date.is-past .tour-date-day {
+  text-decoration: line-through;
+}
 
 /* --- Footer --- */
 .footer {

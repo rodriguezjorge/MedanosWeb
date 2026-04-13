@@ -104,6 +104,37 @@ if (tourSection && typeof openLightbox === 'function') {
   });
 }
 
+// Tour dates: strike through past shows automatically
+function markPastTourDates() {
+  var tourDates = document.querySelectorAll('.tour-date');
+  if (!tourDates.length) return;
+
+  var now = new Date();
+  var todayStart = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+
+  tourDates.forEach(function (item) {
+    var dateEl = item.querySelector('.tour-date-day[datetime]');
+    if (!dateEl) return;
+
+    var rawDate = dateEl.getAttribute('datetime');
+    if (!rawDate) return;
+
+    var parts = rawDate.split('-');
+    if (parts.length !== 3) return;
+
+    var year = Number(parts[0]);
+    var month = Number(parts[1]) - 1;
+    var day = Number(parts[2]);
+    var eventDate = new Date(year, month, day);
+
+    if (eventDate < todayStart) {
+      item.classList.add('is-past');
+    }
+  });
+}
+
+markPastTourDates();
+
 // Mobile menu
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
